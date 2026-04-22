@@ -65,8 +65,9 @@ app.post("/usuarios", validarUsuarios, async (req, res) => {
     usuario: resultado.rows[0]
   })
   } catch (erro) {
+    
     res.status(500).json({
-      erro: "Erro ao criar usuário"
+      erro: "usuario nao esta sendo criado Erro ao criar usuário"
     })
   }
 })
