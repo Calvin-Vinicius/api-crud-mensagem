@@ -112,7 +112,7 @@ app.post("/login", async (req, res) => {
 })
 
 
-app.post("/post", auth, validarPost, async (req, res) => {
+app.post("/posts", auth, validarPost, async (req, res) => {
     try{
         const { titulo, conteudo } = req.body;
         const resultado = await pool.query(
